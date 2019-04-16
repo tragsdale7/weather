@@ -1,0 +1,11 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Returns weather data for cities",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass --watch main.scss -o css"
+  },
+  "author": "TJ Ragsdale",
+  "license": "ISC"
+}

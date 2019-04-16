@@ -1,0 +1,88 @@
+// Variables
+$color-primary: #81E2E2;
+$color-black: #000;
+$color-white: #FFF;
+
+@mixin displayFlexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin desktopContainer
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+}
+
+.header {
+	font-size: 3rem;
+
+	&--logo {
+		height: 6rem;
+		background-color: $color-primary;
+		@include displayFlexCenter;
+	}
+}
+
+.logo {
+	&__text {
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	&__icon {
+		vertical-align: middle;
+	}
+}
+
+.nav {
+	background-color: $color-black;
+	@include displayFlexCenter;
+
+	&__links {
+		@include displayFlexCenter;
+	}
+
+	&__link {
+		position: relative;
+		padding: 0.5rem 3rem;
+
+		&:not(:last-child)::after {
+			content: '';
+			position: absolute;
+			width: 0.2rem;
+			height: 2rem;
+			top: 50%;
+			right: -0.1rem;
+			transform: translateY(-50%);
+			background-color: $color-white;
+		}
+	}
+}
+
+.links {
+	font-size: 1.6rem;
+	font-weight: bold;
+
+	&--white {
+		color: $color-white;
+	}
+}
+
+.link {
+	&:hover {
+		cursor: pointer;
+		color: $color-primary;
+	}
+}
