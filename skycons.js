@@ -650,7 +650,7 @@
         return;
 
       draw = this._determineDrawingFunction(draw);
-
+      
       // Does nothing if the draw function isn't actually a function
       if(typeof draw !== "function")
         return;
